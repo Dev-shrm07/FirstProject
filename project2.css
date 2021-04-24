@@ -1,0 +1,252 @@
+/* Main body css  */
+* {
+  margin: 0%;
+  padding: 0%;
+}
+
+.mainbox {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 0.3rem;
+}
+
+/* Individual container style  */
+
+/* First box style  */
+#box-1 {
+  height: 60vh;
+  background: url("img4p1.jpg") no-repeat center center/cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+#box-1 h1 {
+  margin: 0.5em 1.1em 1.1em 1.1em;
+}
+#box-1 p {
+  margin: 0em 1.1em 1.5em 1.1em;
+}
+#box-1 button {
+  margin: 1.6em 1.1em 1.2em 1.1em;
+}
+
+/* second box style  */
+#box-2 {
+  display: grid;
+  grid-template-areas:
+    "h1 h1"
+    "p1 p2";
+}
+#headingbox2 {
+  grid-area: h1;
+  margin: 1.2em;
+}
+#firstpara {
+  grid-area: p1;
+  margin: 0em 0.8em 1.3em 0.8em;
+}
+#secondpara {
+  grid-area: p2;
+  margin: 0em 0.8em 1.3em 0.8em;
+}
+
+/* Third box style  */
+#box-3 {
+  display: grid;
+  grid-template-areas: 
+  'box1 box2';
+  background-color: rgb(98, 92, 92);
+  justify-content: center;
+}
+#box-3 p{
+    margin: 1.1em;
+}
+
+#container-1 img {
+  height: 200px;
+  width: 250px;
+}
+#container-2 img {
+  height: 200px;
+  width: 250px;
+}
+#container-1 {
+  display: flex;
+  border: 0.6px solid black;
+  width: 250px;
+  height: 300px;
+  flex-direction: column;
+  margin: 20px;
+  background-color: white;
+  box-shadow: 6px 6px rgb(190, 181, 181);
+  grid-area: box1;
+}
+#container-2 {
+  display: flex;
+  border: 0.6px solid black;
+  width: 250px;
+  height: 300px;
+  flex-direction: column;
+  margin: 20px;
+  background-color: white;
+  box-shadow: 6px 6px rgb(190, 181, 181);
+  grid-area: box2;
+}
+
+/* Fourth box style  */
+#box-4 h1{
+    margin: 1.4em 1.2em 1.9em 1.2em;
+}
+#box-4 p{
+    margin: 0em 1.2em 1.4em 1.2em;
+    text-align: center;
+}
+
+/* fifth box style  */
+
+#box-5{
+    display: grid;
+    grid-template-areas: 
+    'contact about';
+}
+#contact{
+    background-color: rgb(5, 5, 71);
+    color: white;
+    height: 40vh;
+    grid-area: contact;
+}
+#contact p{
+    margin: 1.7em 1.2em 2em 1.2em;
+    text-align: center;
+}
+#about{
+    background-color: black;
+    color: white;
+    height: 40vh;
+    grid-area: about;
+}
+#about p{
+    margin: 1.7em 1.2em 2em 1.2em;
+    text-align: center;
+}
+
+/* sixth box styling  */
+
+#box-6{
+    height: 15vh;
+    background-color: rgb(48, 4, 40);
+    color: white;
+    text-align: center;
+}
+#box-6 p{
+    margin: 1.3em;
+}
+
+/* utility classes  */
+p {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.1rem;
+}
+.headings {
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 2.3rem;
+}
+#btn {
+  background-color: rgb(255, 255, 255);
+  color: black;
+  border: 0.6px solid black;
+  font-size: 1.5rem;
+  font-weight: lighter;
+  margin: 0.4em;
+  cursor: pointer;
+  padding: 0.2em;
+}
+
+#btn:hover {
+  background-color: black;
+  color: white;
+}
+
+/* Media queries  */
+
+@media only screen and (max-width : 580px){
+    #box-3{
+        grid-template-areas: 
+        'box1'
+        'box2'
+        ;
+    }
+    #box-5{
+        grid-template-areas: 
+        'contact'
+        'about'
+        ;
+    }
+}
+@media only screen and (max-width : 622px){
+    #box-4 h1{
+        font-size: 2rem;
+    }
+    
+}
+@media only screen and (max-width : 488px){
+    #about{
+        height: 45vh;
+
+    }
+    #about p{
+        font-size: 0.9rem;
+    }
+    #contact{
+        height: 45vh;
+    }
+    #contact p{
+        font-size: 0.9rem;
+    }
+}
+@media only screen and (max-width: 652px){
+    #box-1 h1 {
+        margin: 0.5em 1.1em 1.1em 1.1em;
+        font-size: 2.1rem;
+      }
+}
+@media screen and (max-width: 634px){
+    #box-1{
+        height: 65vh;
+    }
+    
+}
+@media screen and (max-width: 450px){
+    #box-1{
+        height: 80vh;
+    }
+    .headings{
+        font-size: 1.9rem;
+    }
+    
+}
+@media screen and (max-width: 390px){
+    #box-1{
+        height: 85vh;
+    }
+    .headings{
+        font-size: 1.7rem;
+    }
+    p{
+        font-size: 0.8rem;
+    }
+    #btn{
+        font-size: 1.2rem;
+    }
+}
+@media only screen and (max-width: 250px){
+    #box-2{
+        grid-template-areas: 
+        'h1 h1'
+        'p1 p1'
+        'p2 p2'
+        ;
+    }
+}
